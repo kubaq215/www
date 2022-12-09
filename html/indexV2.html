@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="des" content="Strona startowa">
+    <meta name="keywords" content="kurs  html">
+    <title>titleV2</title>
+</head>
+<body>
+    <script>
+        // alert('to jest alert')
+
+        function Wypisz(Imie){
+            document.write('<h2>Wypisuje "' + Imie + '"</h2>')
+        }
+
+        function Dodaj(a,b){
+            return a+b;
+        }
+
+        // window.onload = function(){
+        //     var h1Tytul= document.getElementById('tytul');
+        //     h1Tytul.innerHTML = 'dynamicznie wygenerowany tekst'
+
+        //     var span = document.createElement('span');
+
+        //     var spanText = document.createTextNode('wiecej tekstu');
+        //     span.append(spanText);
+
+        //     document.getElementById('content').appendChild(span);
+
+        //     var h3 = document.getElementsByClassName('eh');
+        //     for(el in h3)
+        //     {
+        //         // console.log(h3[i]);
+        //         let k = 1;
+        //         h3[i].innerHTML = '2. ' + parseInt(k);
+        //         document.write(h3[i])
+        //     }
+        // }
+
+        // window.onload = function(){
+
+        //     function getData(func){
+        //         setTimeout(() => {
+        //             console.log('Pobrano dane');
+        //         }
+        //         ,3000) //ms
+        //     }
+
+        //     console.log('XXXXXXXXXx');
+
+        //     getData(res => {
+        //         console.log(res);
+        //         console.log('YYYYY');
+        //     })
+        // }
+
+        // window.onload = function(){
+        //     var time = 999;
+        //     //Promise
+        //     const promise = new Promise((resolve, error) => {
+        //         if(time < 1000){
+        //             setTimeout(() => {
+        //                 resolve("Pobrano dane");
+        //             }, time);
+        //         } else {
+        //             error("Błąd pobierania");
+        //         }
+        //     }); 
+            
+        // }
+
+        window.onload = function(){
+            fetch("http://api.nbp.pl/api/exchangerates/rates/a/chf/")
+                .then((res) => res.json())
+                .then(res => {
+                    console.warn("Kurs: ");
+                    console.table(res);
+                })
+
+            async function getData() {
+                let res = fetch("http://api.nbp.pl/api/exchangerates/rates/a/chf?format=json", {mode: 'cors'});
+                let rate = await 
+            }
+        }
+
+
+    </script>
+
+    <h1 id="tytul"></h1>
+    <div id="content"></div>
+    <h3 class="eh"></h3>
+    <h3 class="eh"></h3>
+    <h3 class="eh"></h3>
+    <script>
+        var a = prompt('Podaj')
+        Wypisz(a);
+        var y1 = pr
+        Wypisz(Dodaj('Hej ', 'mała'));
+    </script>
+</body>
